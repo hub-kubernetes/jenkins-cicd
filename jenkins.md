@@ -193,6 +193,159 @@ Lets start installing jenking -
 * Create a username and password for your user. Click Save and Continue and then Save and Finish. You can now start using jenkins 
 
 
+* **NOTE**
+
+> In case your jenkins webpage is stuck at a blank screen after finishing configuration, go to your terminal and run `systemctl restart jenkins` and `systemctl restart apache2` to refresh configuration changes. This will fix the issue. 
+
+
+At this point we have created the Jenkins master. Its now time to create the slave node and add it to the jenkins master. The below steps will guide you to create a slave node using the SSH method. 
+
+* Log in to the **master** node and create ssh keys for jenkins user. 
+
+` sudo -iu jenkins` 
+
+` ssh-keygen`
+
+> Press enter for all configurations till you get the prompt back
+
+` cd .ssh`
+
+` cat id_rsa.pub >> authorized_keys` 
+
+` chmod 600 *` 
+
+` cat id_rsa` 
+
+> Copy the private key
+
+* Log in to **Jenkins Dashboard**
+
+* Click **Credentials** on the left panel
+
+* Click **Global** link
+
+* Click **Add Credentials** in the dropdown
+
+* Select **kind** as **SSH Username with private key**
+
+* Retain **Scope** as **Global(Jenkins, nodes, items, all child items, etc)
+
+* On **Private Key** field, select **Enter Directly** and click **Add**
+
+* Paste the content of id_rsa to in the textbox
+
+* Click **OK**
+
+> We have now setup SSH private key successfully on the jenkins dashboard. Now we will distribute our public key to the slave node and authorize the jenkins user on the slave node to connect to master
+
+* Log in to the **master**
+
+` cd .ssh` 
+
+` cat id_rsa.pub` 
+
+> Copy the output of id_rsa.pub for later use
+
+* Log in to the **slave** node
+
+* Log in as root
+
+` sudo -i` 
+
+* Install OS dependency of the software
+
+```
+sudo apt-get update
+sudo apt install software-properties-common apt-transport-https -y
+sudo add-apt-repository ppa:openjdk-r/ppa -y
+```
+
+* Install java 8 
+
+` sudo apt-get update`
+
+` sudo apt install openjdk-8-jdk -y`
+
+` java -version` 
+
+* Create a jenkins user and copy the public key from **master**
+
+` useradd -m -s /bin/bash jenkins`
+
+` sudo -iu jenkins` 
+
+` mkdir .ssh`
+
+` chmod 700 .ssh` 
+
+` cd .ssh` 
+
+` vi authorized_keys` 
+
+> Copy the content of id_rsa.pub from master to this file and save 
+
+` chmod 600 *` 
+
+* Log in to **jenkins** user in **master** and run **ssh** to **jenkins@slave**
+
+* Log in to **master**
+
+` sudo -i jenkins`
+
+` ssh jenkins@slave hostname` 
+
+> For the first prompt type : **yes** and you show get the hostname of the slave node. 
+
+> Now you have successfully set up ssh between master and slave 
+
+
+* Log in to **Jenkins DashBoard** to setup slave 
+
+* On the Left Panel click **Manage Jenkins**
+
+* Click **Manage Nodes**
+
+* On the left Panel select **New Node**
+
+* On the Node Name field provide the name **slave1**
+
+* Click on **Permanent Agent**
+
+* Click **OK**
+
+> This will navigate you to the details page for the new node 
+
+* In the **remote root directory** give the **HOME PATH OF JENKINS USER** on the **slave** node. 
+
+* To get the home path of **jenkins** user - log in to slave node 
+
+` sudo -iu jenkins`
+
+` pwd`
+
+You will get an output as below 
+
+```
+jenkins@slave:~$ pwd
+/home/jenkins
+```
+
+* Enter the above output `/home/jenkins` in the **remote root directory** field. 
+
+* Enter the label as **slave1**
+
+* In the **Launch Method** use **Launch Slave Agent via SSH**
+
+* In the **Host** field provide the **INTERNAL_IP** of the slave node
+
+* In **Credentials** select **jenkins**
+
+* Keep all other configurations as default 
+
+* Click **Save** and wait for master to initialize the slave. This might take a minute or two. 
+
+
+
 
 
 
