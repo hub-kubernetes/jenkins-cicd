@@ -4,6 +4,7 @@
 
 ![Traditional Integration](https://github.com/hub-kubernetes/jenkins-cicd/blob/master/model%20before.png)
 
+***
 
 ##  What is CI and how is it different? 
 
@@ -18,6 +19,9 @@ Lets see how multiple teams work in a CI environment -
 > Multiple teams will checkout code from base repository, perform manual coding and test. The integration cycle (jenkins) will be common for all teams.
 
 ![Traditional Integration](https://github.com/hub-kubernetes/jenkins-cicd/blob/master/MultipleTeamIntegration.png)
+
+
+***
 
 ##  Important terms in Jenkins 
 
@@ -67,7 +71,11 @@ Check Github Changes -> Pull Changes -> Build Code -> Automated Tests -> Check p
 > Testing verifies that the code is working as designed 
 
 
-##  Jenkins Installation with Master & Slave configuration
+***
+
+# Jenkins Installation with Master & Slave configuration
+
+### Pre-requisite
 
 Below are the VM requirements for installing Jenkins master and slave 
 
@@ -75,6 +83,10 @@ Below are the VM requirements for installing Jenkins master and slave
 
 * slave VM - 1 cpu x 1GB x 30 GB storage. This will be the slave. Ubuntu - 18.04LTS
 
+
+***
+
+### Install & Configure Jenkins Master
 
 Lets start installing jenking - 
 
@@ -237,6 +249,10 @@ At this point we have created the Jenkins master. Its now time to create the sla
 * Click **OK**
 
 > We have now setup SSH private key successfully on the jenkins dashboard. Now we will distribute our public key to the slave node and authorize the jenkins user on the slave node to connect to master
+
+***
+
+### Install and configure Jenkins Slave node
 
 * Log in to the **master**
 
