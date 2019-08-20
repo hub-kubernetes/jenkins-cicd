@@ -229,7 +229,7 @@ At this point we have created the Jenkins master. Its now time to create the sla
 
 ` sudo -iu jenkins` 
 
-` ssh-keygen`
+Execute : `ssh-keygen` to generate ssh keys
 
 > Press enter for all configurations till you get the prompt back
 
