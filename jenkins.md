@@ -141,7 +141,7 @@ Lets start installing jenking -
 
 ***
 
-** Install APACHE2 as Reverse PROXY (OPTIONAL STEP)
+## Install APACHE2 as Reverse PROXY (OPTIONAL STEP)
 
 > In **Production** systems you will not expose any external port (8080) and will need access only via port 80 or 443. To achieve this we will now install a webserver and perform a reverse proxy from the webserver port 80 to Jenkins port 8080
 
