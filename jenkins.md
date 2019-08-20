@@ -94,6 +94,8 @@ Lets start installing jenking -
 
 * Install OS related common packages as prerequisite 
 
+` apt-get update` 
+
 ` sudo apt install software-properties-common apt-transport-https -y`
 
 ` sudo add-apt-repository ppa:openjdk-r/ppa -y`
@@ -136,6 +138,10 @@ Lets start installing jenking -
 
 
 > You can now access jenkins by logging in to your VM external IP address at port 8080. On your Browser - **http://EXTERNAL_IP:8080**
+
+***
+
+** Install APACHE2 as Reverse PROXY (OPTIONAL STEP)
 
 > In **Production** systems you will not expose any external port (8080) and will need access only via port 80 or 443. To achieve this we will now install a webserver and perform a reverse proxy from the webserver port 80 to Jenkins port 8080
 
@@ -192,6 +198,9 @@ Lets start installing jenking -
 
 > You can now log in to jenkins by accessing only the IP address of your VM **without** the **8080** port. On your browser access **http://EXTERNAL_IP_OF_YOUR_VM**
 
+***
+
+## Configure Jenkins for the first time 
 
 * Get the initial password for Jenkins 
 
@@ -209,6 +218,10 @@ Lets start installing jenking -
 
 > In case your jenkins webpage is stuck at a blank screen after finishing configuration, go to your terminal and run `systemctl restart jenkins` and `systemctl restart apache2` to refresh configuration changes. This will fix the issue. 
 
+
+***
+
+## Install Jenkins Slave 
 
 At this point we have created the Jenkins master. Its now time to create the slave node and add it to the jenkins master. The below steps will guide you to create a slave node using the SSH method. 
 
