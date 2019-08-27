@@ -1,7 +1,0 @@
-/root/test2/selenium/src/test/java/com/lazerycode/selenium/config/DriverFactory.java
-/root/test2/selenium/src/test/java/com/lazerycode/selenium/config/DriverSetup.java
-/root/test2/selenium/src/test/java/com/lazerycode/selenium/listeners/ScreenshotListener.java
-/root/test2/selenium/src/test/java/com/lazerycode/selenium/DriverBase.java
-/root/test2/selenium/src/test/java/com/lazerycode/selenium/config/DriverType.java
-/root/test2/selenium/src/test/java/com/lazerycode/selenium/tests/GoogleExampleIT.java
-/root/test2/selenium/src/test/java/com/lazerycode/selenium/page_objects/GoogleHomePage.java
