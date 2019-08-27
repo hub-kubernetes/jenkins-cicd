@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="4198" started-at="2019-08-27T14:20:49Z" finished-at="2019-08-27T14:20:53Z">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="4198" started-at="2019-08-27T14:20:49Z" finished-at="2019-08-27T14:20:53Z">
+      <class name="com.lazerycode.selenium.tests.GoogleExampleIT">
+        <test-method status="PASS" signature="instantiateDriverObject()[pri:0, instance:com.lazerycode.selenium.tests.GoogleExampleIT@7ca48474]" name="instantiateDriverObject" is-config="true" duration-ms="14" started-at="2019-08-27T14:20:49Z" finished-at="2019-08-27T14:20:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- instantiateDriverObject -->
+        <test-method status="PASS" signature="googleCheeseExample()[pri:0, instance:com.lazerycode.selenium.tests.GoogleExampleIT@7ca48474]" name="googleCheeseExample" duration-ms="2919" started-at="2019-08-27T14:20:49Z" finished-at="2019-08-27T14:20:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- googleCheeseExample -->
+        <test-method status="PASS" signature="clearCookies()[pri:0, instance:com.lazerycode.selenium.tests.GoogleExampleIT@7ca48474]" name="clearCookies" is-config="true" duration-ms="22" started-at="2019-08-27T14:20:52Z" finished-at="2019-08-27T14:20:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clearCookies -->
+        <test-method status="PASS" signature="googleMilkExample()[pri:0, instance:com.lazerycode.selenium.tests.GoogleExampleIT@7ca48474]" name="googleMilkExample" duration-ms="1198" started-at="2019-08-27T14:20:52Z" finished-at="2019-08-27T14:20:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- googleMilkExample -->
+        <test-method status="PASS" signature="clearCookies()[pri:0, instance:com.lazerycode.selenium.tests.GoogleExampleIT@7ca48474]" name="clearCookies" is-config="true" duration-ms="28" started-at="2019-08-27T14:20:53Z" finished-at="2019-08-27T14:20:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clearCookies -->
+        <test-method status="PASS" signature="closeDriverObjects()[pri:0, instance:com.lazerycode.selenium.tests.GoogleExampleIT@7ca48474]" name="closeDriverObjects" is-config="true" duration-ms="69" started-at="2019-08-27T14:20:53Z" finished-at="2019-08-27T14:20:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriverObjects -->
+      </class> <!-- com.lazerycode.selenium.tests.GoogleExampleIT -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>
