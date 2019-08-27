@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin(origins = "http://34.83.249.168:4200")
+@CrossOrigin(origins = "http://SPRING_SERVER:4200")
 public class UserController {
 
     private final UserRepository userRepository;

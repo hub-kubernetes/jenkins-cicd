@@ -1,6 +1,6 @@
 # Introduction to CI / CD
 
-##  Traditional approach to integrate work between different teams 
+##  Traditional  approach to integrate work between different teams 
 
 ![Traditional Integration](https://github.com/hub-kubernetes/jenkins-cicd/blob/master/model%20before.png)
 
