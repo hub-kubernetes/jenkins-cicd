@@ -322,6 +322,7 @@ sudo add-apt-repository ppa:openjdk-r/ppa -y
 ` sudo -i jenkins`
 
 ` ssh jenkins@slave hostname` 
+above slave=(name of your slavenode)
 
 > For the first prompt type : **yes** and you show get the hostname of the slave node. 
 
